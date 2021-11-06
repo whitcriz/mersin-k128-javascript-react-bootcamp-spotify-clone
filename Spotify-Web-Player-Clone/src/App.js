@@ -35,10 +35,11 @@ function App() {
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
-          playlists,
+          playlists: playlists,
         });
       });
-      spotify.getPlaylist("37i9dQZF1E34Ucml4HHx1w").then((playlist) => {
+      
+      spotify.getPlaylist("37i9dQZEVXcIzEKWtXXBaQ").then((playlist) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: playlist,
